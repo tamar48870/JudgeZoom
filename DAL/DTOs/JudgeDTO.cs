@@ -12,6 +12,8 @@ namespace DAL
         public JudgeDTO()
         {
             this.Role = RoleEnum.Judge.Description();
+            this.permission = PermissionEnum.Admin;
+
 
         }
     }

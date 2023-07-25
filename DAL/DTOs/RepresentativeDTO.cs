@@ -6,7 +6,9 @@ namespace DAL
     {
         public RepresentativeDTO()
         {
+            
             this.Role = RoleEnum.Representative.Description();
+            
 
         }
     }
