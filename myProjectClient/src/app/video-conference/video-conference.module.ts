@@ -4,11 +4,12 @@ import { SharedModule } from '../shared/shared.module';
 // import { VideoScreenComponent } from './components/video-screen/video-screen.component';
 
 
-
 @NgModule({
   declarations: [],
   imports: [
-    SharedModule
+    SharedModule,
+    
+    
 
   ]
 })
