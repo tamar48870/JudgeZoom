@@ -1,14 +1,19 @@
 <h1>Discussion Screen</h1>
-<div class="row" *ngIf="rolrList">
+<section class="wrap">
+<div class="flex" *ngIf="rolrList">
 <div class="rectangle" *ngFor="let participant of rolrList">
   <span>{{ participant.name }}</span>
   <span> - </span>
   <span>{{ participant.role }}</span>
 <br>
 
-  <button kendoButton [disabled]="userService?.currentUser?.Id != participant.Id" (click)="muteMicrophone(participant.Id)">
+  <button kendoButton [disabled]="(userService?.currentUser?.permission != permissionEnum.Admin && userService?.currentUser?.id != participant.id  ) || participant.muted == true" (click)="muteMicrophone(participant.id)">
     Mute Microphone
   </button>
 </div>
-{{userService?.currentUser}}
-<button *ngIf="userService?.currentUser?.permission == permissionEnum.Admin"(click)="muteAllParticipants()">Mute All Participants</button></div>
+</div>
+<div>
+{{userService?.currentUser?.name}}
+<button *ngIf="userService?.currentUser?.permission == permissionEnum.Admin"(click)="muteAllParticipants()">Mute All Participants</button>
+</div>
+</section>

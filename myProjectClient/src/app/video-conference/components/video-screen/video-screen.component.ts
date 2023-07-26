@@ -26,6 +26,15 @@ export class VideoScreenComponent {
       console.log(data);
     });
   }
-  muteAllParticipants() {}
-  muteMicrophone(id = 0) {}
+  muteAllParticipants() {
+    this.rolrList.forEach(u=>{
+      u.muted = true;
+    })
+  }
+  muteMicrophone(id:number) {
+    var userIndex = this.rolrList.findIndex(x=>x.id == id);
+    this.rolrList[userIndex].muted = true;
+
+
+  }
 }

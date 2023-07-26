@@ -1,5 +1,21 @@
-.rectangle {
-    width: 200px; 
-    height: 100px;
-    border: 2px solid black; 
+
+
+  
+
+  .wrap{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+
+    .flex{
+      display: flex;
+      gap: 5rem;
+      height: 30vh;
+
+      .rectangle {
+        flex: 1;
+        border: 2px solid black; 
+        padding: 2rem;
+      }
+    }
   }

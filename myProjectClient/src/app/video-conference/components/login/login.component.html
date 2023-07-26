@@ -1,2 +1,4 @@
-<kendo-dropdownlist [data]="roleList" value="בחר"    (selectionChange)="selectionChange($event)">
+<kendo-dropdownlist [data]="roleList"     textField="Value"
+valueField="Key" (selectionChange)="selectionChange($event)">
 </kendo-dropdownlist>
+<!-- value="בחר" -->
