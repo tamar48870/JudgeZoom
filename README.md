@@ -2,4 +2,4 @@
 
 # JudgeZoom
 
-# בקליינט 
+<sup>Small text</sup>
