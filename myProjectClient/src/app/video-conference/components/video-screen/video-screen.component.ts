@@ -11,7 +11,7 @@ import { PermissinEnum } from 'src/app/video-conference/enums/PermissinEnum';
   styleUrls: ['./video-screen.component.scss'],
 })
 export class VideoScreenComponent {
-  rolrList: RoleHolderDTO[] = [];
+  participantsList: RoleHolderDTO[] = [];
   permissionEnum=PermissinEnum;
   textMute="השתק"
   textUnMute="השתק"
@@ -25,18 +25,18 @@ export class VideoScreenComponent {
 
   public ngOnInit(): void {
     this.participantsResolverService.resolve().subscribe((data) => {
-      this.rolrList = data;
+      this.participantsList = data;
       console.log(data);
     });
   }
   muteAllParticipants() {
-    this.rolrList.forEach(u=>{
+    this.participantsList.forEach(u=>{
       u.muted = true;
     })
   }
   muteOrUnMicrophone(id:number) {
-    var userIndex = this.rolrList.findIndex(x=>x.id == id);
-    this.rolrList[userIndex].muted = !this.rolrList[userIndex].muted;
+    var userIndex = this.participantsList.findIndex(x=>x.id == id);
+    this.participantsList[userIndex].muted = !this.participantsList[userIndex].muted;
 
 
   }
