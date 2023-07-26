@@ -1,3 +1,4 @@
+import { ZoomDTO } from "src/app/shared/Models/ZoomDTO";
 import { PermissinEnum } from "src/app/video-conference/enums/PermissinEnum";
 
 export class RoleHolderDTO
@@ -8,5 +9,6 @@ export class RoleHolderDTO
     public MailAddress :string= ''
     public permission:PermissinEnum = PermissinEnum.User
     public muted: boolean = false
+    public zoomHandler:ZoomDTO= new ZoomDTO();
 
 }

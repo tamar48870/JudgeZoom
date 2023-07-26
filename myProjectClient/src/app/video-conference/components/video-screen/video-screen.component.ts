@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ParticipantsResolverService } from '../../services/participants.-resolver.service';
+import { ParticipantsResolverService } from '../../services/participants.resolver.service';
 import { RoleHolderDTO } from '../../models/RoleHolder.model';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../../services/user.service';
@@ -13,6 +13,9 @@ import { PermissinEnum } from 'src/app/video-conference/enums/PermissinEnum';
 export class VideoScreenComponent {
   rolrList: RoleHolderDTO[] = [];
   permissionEnum=PermissinEnum;
+  textMute="השתק"
+  textUnMute="השתק"
+
 
   constructor(
     protected participantsResolverService: ParticipantsResolverService,
@@ -31,10 +34,11 @@ export class VideoScreenComponent {
       u.muted = true;
     })
   }
-  muteMicrophone(id:number) {
+  muteOrUnMicrophone(id:number) {
     var userIndex = this.rolrList.findIndex(x=>x.id == id);
-    this.rolrList[userIndex].muted = true;
+    this.rolrList[userIndex].muted = !this.rolrList[userIndex].muted;
 
 
   }
+ 
 }

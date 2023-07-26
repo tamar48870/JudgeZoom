@@ -23,29 +23,10 @@ namespace ProjectApi.Controllers
 
         }
 
-        // GET api/<ParticipantsController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/<ParticipantsController>
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/<ParticipantsController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<ParticipantsController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void LeaveParticipant(int id)
         {
+            //פנייה לBL
         }
     }
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ParticipantsResolverService } from '../../services/participants.-resolver.service';
+import { ParticipantsResolverService } from '../../services/participants.resolver.service';
 import { RoleHolderDTO } from '../../models/RoleHolder.model';
-import { KeyValuePair } from '../../interfaces/arrays.interface';
+import { KeyValuePair } from '../../../shared/interfaces/arrays.interface';
 import { UserService } from '../../services/user.service';
 import { ActivatedRoute } from '@angular/router';
 //import { KeyValuePair } from '../../interfaces/arrays.interface';

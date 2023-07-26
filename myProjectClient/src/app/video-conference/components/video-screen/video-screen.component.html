@@ -7,8 +7,10 @@
   <span>{{ participant.role }}</span>
 <br>
 
-  <button kendoButton [disabled]="(userService?.currentUser?.permission != permissionEnum.Admin && userService?.currentUser?.id != participant.id  ) || participant.muted == true" (click)="muteMicrophone(participant.id)">
-    Mute Microphone
+  <button kendoButton [disabled]="(userService?.currentUser?.permission != permissionEnum.Admin && userService?.currentUser?.id != participant.id  ) " (click)="muteOrUnMicrophone(participant.id)">
+    <span *ngIf="participant.muted">הפעל</span>
+    <span *ngIf="!participant.muted">השתק</span>
+
   </button>
 </div>
 </div>

@@ -34,5 +34,9 @@ namespace BL
         {
             throw new NotImplementedException();
         }
+        public void LeaveParticipant(int id)
+        {
+
+        }
     }
 }

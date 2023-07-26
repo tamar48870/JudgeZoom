@@ -9,6 +9,7 @@ import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './video-conference/components/login/login.component';
 import { DropDownsModule } from "@progress/kendo-angular-dropdowns";
+import { FooterComponentComponent } from './core/components/footer-component/footer-component.component';
 
 
 
@@ -16,7 +17,8 @@ import { DropDownsModule } from "@progress/kendo-angular-dropdowns";
   declarations: [
     AppComponent,
     VideoScreenComponent,
-    LoginComponent
+    LoginComponent,
+    FooterComponentComponent
     
   ],
   imports: [

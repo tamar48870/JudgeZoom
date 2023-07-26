@@ -13,6 +13,7 @@ namespace BL
      void MuteAll(RoleHolderDTO role);
     void MuteRole(RoleHolderDTO role,int muteRollId);
     void MuteMe(int muteRollId);
+     void LeaveParticipant(int id);
 
 
     }
